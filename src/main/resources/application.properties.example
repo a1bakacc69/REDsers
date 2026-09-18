@@ -1,0 +1,15 @@
+spring.application.name=Dsers
+
+# ===== 数据库配置 =====
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/dsers?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+spring.datasource.username=你的数据库用户名
+spring.datasource.password=你的数据库密码
+
+# ===== MyBatis-Plus 配置 =====
+mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus.configuration.map-underscore-to-camel-case=true
+
+# ===== Shopify 对接配置 =====
+shopify.store.url=https://你的店铺名.myshopify.com
+shopify.access.token=你的token
