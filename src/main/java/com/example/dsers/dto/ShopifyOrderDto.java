@@ -25,6 +25,15 @@ public class ShopifyOrderDto {
     private String createdAt;
     @JsonProperty("cancelled_at")
     private String cancelledAt;
+    // ==================== 阶段2新增：地址（下单给供应商用）====================
+
+    @JsonProperty("shipping_address")
+    private AddressDto shippingAddress;
+
+    /** 账单地址。★ 仅用于姓名兜底（shipping_address.name 可能是空串） */
+    @JsonProperty("billing_address")
+    private AddressDto billingAddress;
+
     @JsonProperty("line_items")
     private List<OrderItemDTO> lineItems;
 }

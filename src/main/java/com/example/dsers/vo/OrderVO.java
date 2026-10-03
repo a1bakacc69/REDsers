@@ -18,5 +18,11 @@ public class OrderVO {
     private String financialStatus;  // 支付状态
     private String fulfillmentStatus;// 发货状态
     private LocalDateTime createdAt; // 下单时间
+
+    // ==================== 阶段1新增 ====================
+    private String platform;         // 来源平台：SHOPIFY / WOOCOMMERCE
+    private String status;           // 本系统中台的状态：PENDING/ORDERED/SHIPPED/SYNCED
+    private String trackingNumber;   // 运单号
+
     private List<OrderItem> items;   // 商品明细列表
 }
