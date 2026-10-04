@@ -17,18 +17,17 @@ public class OrderItem {
 
     private String title;
 
-    // ==================== 阶段2新增：商品标识（认规格 + 回写用）====================
+    // 商品标识，认规格和回写用
 
-    /** 平台侧明细行ID。★ 回写发货时用它说明"发的是哪几行" */
+    /** 回写发货时用它说明"发的是哪几行" */
     private Long platformLineItemId;
 
-    /** 平台侧变体ID（具体规格）。比 sku 可靠 —— sku 实测可能为 null */
+    /** 具体规格。比 sku 可靠 —— sku 实测可能为 null */
     private Long variantId;
 
-    /** 平台侧商品ID */
     private Long productId;
 
-    /** 规格名称，如 150cm / Default Title */
+    /** 如 150cm / Default Title */
     private String variantTitle;
 
     private Integer quantity;

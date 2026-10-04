@@ -5,7 +5,7 @@ import java.util.List;
 
 @Data
 public class ShopifyOrderDto {
-    private Long id;                        // 对应 JSON 的 id
+    private Long id;
     @JsonProperty("order_number")
     private String orderNumber;
     private String name;
@@ -25,12 +25,12 @@ public class ShopifyOrderDto {
     private String createdAt;
     @JsonProperty("cancelled_at")
     private String cancelledAt;
-    // ==================== 阶段2新增：地址（下单给供应商用）====================
+    // 地址，下单给供应商用
 
     @JsonProperty("shipping_address")
     private AddressDto shippingAddress;
 
-    /** 账单地址。★ 仅用于姓名兜底（shipping_address.name 可能是空串） */
+    /** 账单地址，仅用于姓名兜底（发货地址的 name 可能是空串） */
     @JsonProperty("billing_address")
     private AddressDto billingAddress;
 
